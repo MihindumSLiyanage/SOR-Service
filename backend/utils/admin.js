@@ -1,0 +1,77 @@
+const bcrypt = require('bcryptjs');
+const admins = [
+    {
+        name: 'Admin',
+        image: 'https://i.ibb.co/WpM5yZZ/9.png',
+        email: 'admin@gmail.com',
+        password: bcrypt.hashSync('123456'),
+        phone: '360-943-7332',
+        role: 'Admin',
+        joiningDate: new Date(),
+    },
+    {
+        name: 'Kasun Isuru',
+        image: 'https://i.ibb.co/ZTWbx5z/team-1.jpg',
+        email: 'kasunis1234@gmail.com',
+        password: bcrypt.hashSync('123456'),
+        phone: '505-771-8879',
+        role: 'Assitant',
+        joiningDate: new Date(),
+    },
+    {
+        name: 'Dorothy R. Brown',
+        image: 'https://i.ibb.co/d294W8Y/team-4.jpg',
+        email: 'dorothy@gmail.com',
+        password: bcrypt.hashSync('123456'),
+        phone: '708-628-3122',
+        role: 'Security Guard',
+        joiningDate: new Date(),
+    },
+    {
+        name: 'Alice B. Porter',
+        image: 'https://i.ibb.co/m5B0hK4/team-8.jpg',
+        email: 'alice@gmail.com',
+        password: bcrypt.hashSync('123456'),
+        phone: '708-488-9728',
+        role: 'Accountant',
+        joiningDate: new Date(),
+    },
+    {
+        name: 'Corrie H. Cates',
+        image: 'https://i.ibb.co/SNN7JCX/team-6.jpg',
+        email: 'corrie@gmail.com',
+        password: bcrypt.hashSync('123456'),
+        phone: '914-623-6873',
+        role: 'Accountant',
+        joiningDate: new Date(),
+    },
+    {
+        name: 'Shawn E. Palmer',
+        image: 'https://i.ibb.co/GWVWYNn/team-7.jpg',
+        email: 'shawn@gmail.com',
+        password: bcrypt.hashSync('123456'),
+        phone: '949-202-2913',
+        role: 'Manager',
+        joiningDate: new Date(),
+    },
+    {
+        name: 'Stacey J. Meikle',
+        image: 'https://i.ibb.co/XjwBLcK/team-2.jpg',
+        email: 'stacey@gmail.com',
+        password: bcrypt.hashSync('123456'),
+        phone: '616-738-0407',
+        role: 'Accountant',
+        joiningDate: new Date(),
+    },
+    {
+        name: 'Marion V. Parker',
+        image: 'https://i.ibb.co/3zs3H7z/team-5.jpg',
+        email: 'marion@gmail.com',
+        password: bcrypt.hashSync('123456'),
+        phone: '713-675-8813',
+        role: 'Admin',
+        joiningDate: new Date(),
+    }
+];
+
+module.exports = admins;

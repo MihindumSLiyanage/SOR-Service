@@ -1,0 +1,37 @@
+import React, { useContext } from 'react';
+import { Select } from '@windmill/react-ui';
+
+import ReservationServices from '../../services/ReservationServices';
+import { notifySuccess, notifyError } from '../../utils/toast';
+import { SidebarContext } from '../../context/SidebarContext';
+
+const SelectStatusRev = ({ id }) => {
+  const { setIsUpdate } = useContext(SidebarContext);
+  const handleChangeStatus = (id, status) => {
+    ReservationServices.updateStatus(id, { status: status })
+      .then((res) => {
+        notifySuccess(res.message);
+        setIsUpdate(true);
+      })
+      .catch((err) => notifyError(err.message));
+  };
+
+  return (
+    <>
+      <Select
+        onChange={(e) => handleChangeStatus(id, e.target.value)}
+        className="border border-gray-50 bg-gray-50 dark:border-gray-700 h-8 rounded-md text-xs focus:border-gray-400 focus:outline-none"
+      >
+        <option value="Status" defaultValue>
+          Status
+        </option>
+        <option value="Pending">Pending</option>
+        <option value="Processing">Processing</option>
+        <option value="Completed">Completed</option>
+        <option value="Cancel">Cancel</option>
+      </Select>
+    </>
+  );
+};
+
+export default SelectStatusRev;
